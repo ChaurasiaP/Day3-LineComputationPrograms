@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class LineComputationPrograms {
     public static void main(String[] args) {
 
-        System.out.println("Line Computation: UC2: Check for equality of lines");
+        System.out.println("Line Computation: UC3: Compare the lines");
         // VARIABLES TO CALCULATE LINE 1
         int x1, y1;     //  co-ordinates of first point
         int x2, y2;     //  co-ordinates of second point
