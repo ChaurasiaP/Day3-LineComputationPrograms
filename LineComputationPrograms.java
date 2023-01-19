@@ -3,31 +3,56 @@ import java.util.Scanner;
 public class LineComputationPrograms {
     public static void main(String[] args) {
 
-        System.out.println("Line Computation: UC1: Compute length of Line");
+        System.out.println("Line Computation: UC2: Check for Equality of two Lines");
 
-        int x1;     // X co-ordinate of first point
-        int x2;     // X co-ordinate of second point
-        int y1;     // Y co-ordinate of first point
-        int y2;     // Y co-ordinate of second point
+        // VARIABLES TO CALCULATE LINE 1
+        int x1, y1;     //  co-ordinates of first point
+        int x2, y2;     //  co-ordinates of second point
 
-        // TAKING CO-ORDINATES FOR POINT 1
+
+        // VARIABLES TO CALCULATE LINE 2
+        int x3, y3;     // co-ordinates of third point
+        int x4, y4;     // co-ordinates of fourth point
+
+        double LengthOfLine1, LengthOfLine2;
+
+
+        //TAKING INPUTS FOR COMPUTING LINE 1
+        System.out.println("Co-ordinates for line 1");
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter Co-ordinates x1 and y1: ");
         x1 = sc.nextInt();
         y1 = sc.nextInt();
 
-        //TAKING CO-ORDINATES FOR POINT 2
-        System.out.print("Enter Co-ordinates x2 and y2: ");
+        System.out.print("Enter co-ordinates x2 and y2: ");
         x2 = sc.nextInt();
         y2 = sc.nextInt();
 
-        // CALCULATIONS FOR GETTING THE LENGTH OF THE LINE WITH THE GIVEN TWO CO-ORDINATES
+        // CALCULATIONS FOR LINE1
         double ValOfx = Math.pow((x2 - x1), 2);
         double ValOfy = Math.pow((y2 - y1), 2);
+        LengthOfLine1 = Math.sqrt((ValOfx + ValOfy));
+        // END OF CALCULATIONS FOR LINE 1
 
-        double LengthOfLine = Math.sqrt((ValOfx + ValOfy));
+        // TAKING INPUTS FOR LINE 2
+        System.out.println("Co-ordinates for line 2");
+        System.out.print("Enter co-ordinates x3 and y3: ");
+        x3 = sc.nextInt();
+        y3 = sc.nextInt();
 
-        // PRINTING OUT THE LENGTH
-        System.out.println("Length Of the Line is: " + LengthOfLine);
+        System.out.print("Enter co-ordinates x4 and y4: ");
+        x4 = sc.nextInt();
+        y4 = sc.nextInt();
+
+        // CALCULATIONS FOR LINE 2
+        double ValOfX = Math.pow((x4 - x3), 2);
+        double ValOfY = Math.pow((y4 - y3), 2);
+        LengthOfLine2 = Math.sqrt((ValOfX + ValOfY));
+        // END OF CALCULATIONS FOR LINE 2
+
+        Double L1 = LengthOfLine1;
+        Double L2 = LengthOfLine2;
+        //  CHECKING FOR EQUALITY
+        System.out.println(L1.equals(L2));
     }
 }
