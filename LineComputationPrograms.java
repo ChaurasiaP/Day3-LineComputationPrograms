@@ -3,8 +3,7 @@ import java.util.Scanner;
 public class LineComputationPrograms {
     public static void main(String[] args) {
 
-        System.out.println("Line Computation: UC2: Check for Equality of two Lines");
-
+        System.out.println("Line Computation: UC2: Check for equality of lines");
         // VARIABLES TO CALCULATE LINE 1
         int x1, y1;     //  co-ordinates of first point
         int x2, y2;     //  co-ordinates of second point
@@ -52,7 +51,13 @@ public class LineComputationPrograms {
 
         Double L1 = LengthOfLine1;
         Double L2 = LengthOfLine2;
-        //  CHECKING FOR EQUALITY
-        System.out.println(L1.equals(L2));
+
+        if((L1.compareTo(L2)<0)){
+            System.out.println("Line 1 is shorter than Line 2");
+        } else if ((L1.compareTo(L2)>0)){
+            System.out.println("Line 1 is greater than Line 2");
+        }else {
+            System.out.println("Both Lines are Equal");
+        }
     }
 }
