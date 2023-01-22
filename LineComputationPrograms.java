@@ -1,19 +1,21 @@
 import java.util.Scanner;
 
 public class LineComputationPrograms {
+    static double LengthOfLine1;
+    static double LengthOfLine2;
+
     public static void main(String[] args) {
 
-        System.out.println("Line Computation: UC3: Compare the lines");
+
+        System.out.println("Line Computation: Using Method");
+
         // VARIABLES TO CALCULATE LINE 1
         int x1, y1;     //  co-ordinates of first point
         int x2, y2;     //  co-ordinates of second point
 
-
         // VARIABLES TO CALCULATE LINE 2
         int x3, y3;     // co-ordinates of third point
         int x4, y4;     // co-ordinates of fourth point
-
-        double LengthOfLine1, LengthOfLine2;
 
 
         //TAKING INPUTS FOR COMPUTING LINE 1
@@ -28,10 +30,11 @@ public class LineComputationPrograms {
         y2 = sc.nextInt();
 
         // CALCULATIONS FOR LINE1
+
         double ValOfx = Math.pow((x2 - x1), 2);
         double ValOfy = Math.pow((y2 - y1), 2);
         LengthOfLine1 = Math.sqrt((ValOfx + ValOfy));
-        // END OF CALCULATIONS FOR LINE 1
+        // END OF CALCULATIONS FOR LINE 1.
 
         // TAKING INPUTS FOR LINE 2
         System.out.println("Co-ordinates for line 2");
@@ -49,14 +52,19 @@ public class LineComputationPrograms {
         LengthOfLine2 = Math.sqrt((ValOfX + ValOfY));
         // END OF CALCULATIONS FOR LINE 2
 
+        checkLine(LengthOfLine1, LengthOfLine2);
+    }
+
+    public static void checkLine(double length1, double length2) {
+
         Double L1 = LengthOfLine1;
         Double L2 = LengthOfLine2;
 
-        if((L1.compareTo(L2)<0)){
+        if ((L1.compareTo(L2) < 0)) {
             System.out.println("Line 1 is shorter than Line 2");
-        } else if ((L1.compareTo(L2)>0)){
+        } else if ((L1.compareTo(L2) > 0)) {
             System.out.println("Line 1 is greater than Line 2");
-        }else {
+        } else {
             System.out.println("Both Lines are Equal");
         }
     }
