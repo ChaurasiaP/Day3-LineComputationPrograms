@@ -23,6 +23,10 @@ public class LineComparison {
 
     }
 
+
+=======
+    // METHOD TO COMPARE LINES
+
     public void checkLine(double line1, double line2) {
 
         Double L1 = line1;
